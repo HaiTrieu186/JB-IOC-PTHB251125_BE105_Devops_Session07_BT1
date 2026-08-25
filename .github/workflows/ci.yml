@@ -14,6 +14,9 @@ jobs:
         with:
           java-version: 17
           distribution: temurin
+      - name: add permission to gradlew
+        working-directory: java-service
+        run: chmod +x gradlew
       - name: Build with Gradle
         working-directory: cart-service
         run: ./gradlew bootJar
