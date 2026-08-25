@@ -15,4 +15,5 @@ jobs:
           java-version: 17
           distribution: temurin
       - name: Build with Gradle
+        working-directory: cart-service
         run: ./gradlew bootJar
