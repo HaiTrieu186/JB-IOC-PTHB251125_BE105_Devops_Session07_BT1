@@ -9,17 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           java-version: 17
           distribution: temurin
-
       - name: add permission to gradlew
         working-directory: cart-service
         run: chmod +x gradlew
-
       - name: Build with Gradle
         working-directory: cart-service
         run: ./gradlew bootJar
